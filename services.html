@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="En" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al fooz</title>
+    <link rel="icon" href="images/fav-icon.svg" />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap link  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.rtl.min.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- fancyBox link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+
+    <!-- owl-carousel link -->
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+
+    <!-- nice select link -->
+    <link rel="stylesheet" href="css/nice-select.css" />
+
+    <link rel="stylesheet" href="css/animate.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- -------- loading ----------- -->
+    <div id="loading">
+      <div class="loader">
+        <img src="images/fav-icon.svg" alt="" />
+      </div>
+    </div>
+
+    <!------------- header section -------------->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light top-0">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand m-0" href="index.html">
+            <img src="images/logo.png" alt="" />
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between align-items-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Our Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blogs.html">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav m-0">
+              <li class="nav-item">
+                <a href="" class="nav-link" id="lang">
+                  <span>ع</span>
+                  <i class="bi bi-globe"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!------------- breadcrumb section ------------->
+    <nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+      <div class="container-fluid">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Services</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!------------- services section -------------->
+    <section class="services position-relative text-center">
+      <div class="container-fluid position-relative">
+        <div class="col-lg-7 col-md-10 m-auto">
+          <small class="secName"> #1 Our Services</small>
+          <h2 class="secTitle">Our Construction Arsenal</h2>
+          <p>
+            At Al Fawz Contracting, we offer a wide range of construction
+            services designed to meet the needs of residential, commercial, and
+            industrial projects. From general contracting and project management
+            to infrastructure, finishing, and renovation works, we deliver
+            solutions that ensure quality, efficiency, and long-term value.
+          </p>
+        </div>
+        <div class="servWrapper">
+          <div class="row g-0 row-cols-lg-4 row-cols-2 justify-content-between">
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2.svg" alt="" />
+                </div>
+                <h3 class="servName">Civil</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-1.svg" alt="" />
+                </div>
+                <h3 class="servName">Finishing</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-2.svg" alt="" />
+                </div>
+                <h3 class="servName">Electric</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-3.svg" alt="" />
+                </div>
+                <h3 class="servName">Mechanic</h3>
+              </div>
+            </div>
+             <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-8.svg" alt="" />
+                </div>
+                <h3 class="servName">Concrete Structure</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-9.svg" alt="" />
+                </div>
+                <h3 class="servName">Steel Structure</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-5.svg" alt="" />
+                </div>
+                <h3 class="servName">Fire Fighting</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-10.svg" alt="" />
+                </div>
+                <h3 class="servName">HVAC</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-4.svg" alt="" />
+                </div>
+                <h3 class="servName">Power & Lights</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-7.svg" alt="" />
+                </div>
+                <h3 class="servName">Medium & High Voltage</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-6.svg" alt="" />
+                </div>
+                <h3 class="servName">Low Current</h3>
+              </div>
+            </div>
+             <div class="col">
+              <div class="serv">
+                <a href="service-details.html" class="link"></a>
+                <div class="hexagonIcon">
+                  <img src="images/Layer 2-11.svg" alt="" />
+                </div>
+                <h3 class="servName">Planning</h3>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------- contact section -------------->
+    <section class="contact py-5">
+      <div class="bg-section">
+        <div class="container-fluid">
+          <div class="row gy-4 align-items-center">
+            <div class="col-lg-6">
+              <h2 class="secTitle">LET’S BUILD YOUR NEXT PROJECT</h2>
+              <p>
+                At Al Fawz Contracting, our expertise covers a wide range of
+                construction fields. From residential and commercial buildings
+                to industrial facilities and infrastructure, our team delivers
+                projects with precision, quality, and integrity. We’ve organized
+                our work into four core categories: Residential, Commercial,
+                Industrial, and Infrastructure.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <form action="">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    value=""
+                    placeholder="Name"
+                    id="floatingInput"
+                  />
+                  <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    value=""
+                    placeholder="Name"
+                    id="floatingInput2"
+                  />
+                  <label for="floatingInput2">Phone</label>
+                </div>
+                 <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    value=""
+                    placeholder="Email"
+                    id="floatingInput3"
+                  />
+                  <label for="floatingInput3">Email</label>
+                </div>
+                <div class="form-group mb-3">
+                  <textarea
+                    class="form-control"
+                    placeholder="Your Message"
+                    style="height: 160px"
+                  ></textarea>
+                  <!-- <label for="floatingTextarea2">Comments</label> -->
+                </div>
+
+                <button class="main-btn px-5">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------- footer section -------------->
+    <footer>
+      <div class="footer-nav py-4">
+        <div class="navbar navbar-expand-lg">
+          <div class="container-fluid gap-3 align-items-center">
+            <a class="navbar-brand m-0" href="index.html">
+              <img src="images/logo.png" alt="" />
+            </a>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projects.html">Our Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blogs.html">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="" class="btn main-btn">
+                  <i class="bi bi-download"></i>
+                  <span>Download Profile</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="container-fluid">
+          <a href="https://smartvision4p.com" class="">
+            <span class="text-white">
+              © 2025 All rights reserved
+            </span>
+            <img src="images/smart-logo.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!------------- go to up -------------->
+    <div class="scrollUp" id="scrollUp">
+      <a href="#">
+        <i class="fa fa-arrow-up"></i>
+      </a>
+    </div>
+
+    <!-- jQuery script -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- owl-carousel script -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- fancyBox script -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <!-- rateyo script -->
+    <script src="js/jquery.rateyo.min.js"></script>
+
+    <!-- nice select script -->
+    <script src="js/jquery.nice-select.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
