@@ -191,9 +191,8 @@ body {
    color: var(--main) !important;
 }
 
-.bg-main {
-   background: var(--main);
-   color: #fff;
+.bg-secondry {
+   background: var(--secondry);
 }
 
 .secName {
@@ -721,6 +720,13 @@ nav.navbar.fixed {
    font-weight: 300;
    line-height: 1.6;
    padding-inline-end: 2rem;
+   color: #B7B8BB;
+}
+
+.about .about-content * {
+   color: #B7B8BB;
+   margin-bottom: .75rem;
+   font-weight: 500;
 }
 
 .about .about-img {
@@ -820,7 +826,7 @@ nav.navbar.fixed {
 
 .outer_hex_icon,
 .inner_hex_icon {
-   margin-block: 0;
+   margin: 0;
    position: relative;
 }
 
@@ -853,6 +859,22 @@ nav.navbar.fixed {
    z-index: -4;
 }
 
+.serv-img img {
+   aspect-ratio: 3 / 2;
+   border-radius: 20px;
+}
+
+.serv_features .card::before{
+   content: '';
+   position: absolute;
+   top: 1.5rem;
+   inset-inline-start: 3.9rem;
+   width: calc(100% - 2.8rem);
+   border-bottom: 2px solid var(--white);
+}
+.serv_features .card .feature-desc{
+   color: #B7B8BB;
+}
 
 /* ------------- vid section --------------- */
 .video-wrap {
