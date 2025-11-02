@@ -371,7 +371,7 @@ textarea.form-control {
 
 .main-btn,
 .main-btn-outline {
-   background: var(--white);
+   background: var(--white) !important;
    color: var(--main) !important;
    text-align: center;
    overflow: hidden;
@@ -682,6 +682,9 @@ nav.navbar.fixed {
    -ms-transform: translate(0%, 50%);
    -o-transform: translate(0%, 50%);
    -webkit-transform: translate(0%, 50%);
+}
+.hero-sec .float-icon i{
+   color: var(--main);
 }
 
 .float-icon:before {
