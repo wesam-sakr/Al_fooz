@@ -54,6 +54,78 @@ if ($('#stats').length > 0) {
 
 }
 
+
+$(document).ready(function () {
+  var main = $(".one");
+  var thumbs = $(".two");
+  var syncedSecondary = true;
+
+  // السلايدر الرئيسي
+  main.owlCarousel({
+    items: 1,
+    slideSpeed: 1000,
+    nav: false,
+    autoplay: true,
+    dots: false,
+    stagePadding: 0,
+    loop: true,
+    rtl: dirAr, // اتجاه عربي
+  }).on("changed.owl.carousel", syncPosition);
+
+  // السلايدر الثاني (الثمبنيلز)
+  thumbs
+    .on("initialized.owl.carousel", function () {
+      thumbs.find(".owl-item").eq(0).addClass("current");
+    })
+    .owlCarousel({
+      items: 4, // عدد الصور الصغيرة
+      dots: false,
+      nav: true,
+      rtl: dirAr,
+      margin: 5,
+      stagePadding: 0,
+      smartSpeed: 200,
+      slideSpeed: 500,
+      slideBy: 4,
+      navText: ['<i class="bi bi-chevron-left"></i>', '<i class="bi bi-chevron-right"></i>']
+    })
+    .on("changed.owl.carousel", syncPosition2);
+
+  function syncPosition(el) {
+    var count = el.item.count - 1;
+    var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+
+    if (current < 0) current = count;
+    if (current > count) current = 0;
+
+    thumbs.find(".owl-item").removeClass("current").eq(current).addClass("current");
+    var onscreen = thumbs.find(".owl-item.active").length - 1;
+    var start = thumbs.find(".owl-item.active").first().index();
+    var end = thumbs.find(".owl-item.active").last().index();
+
+    if (current > end) {
+      thumbs.data("owl.carousel").to(current, 100, true);
+    }
+    if (current < start) {
+      thumbs.data("owl.carousel").to(current - onscreen, 100, true);
+    }
+  }
+
+  function syncPosition2(el) {
+    if (syncedSecondary) {
+      var number = el.item.index;
+      main.data("owl.carousel").to(number, 100, true);
+    }
+  }
+
+  thumbs.on("click", ".owl-item", function (e) {
+    e.preventDefault();
+    var number = $(this).index();
+    main.data("owl.carousel").to(number, 300, true);
+  });
+});
+
+
 // owl carousel
 $(document).ready(function () {
 
@@ -163,96 +235,6 @@ $(document).ready(function () {
         items: 3,
       }
     }
-  });
-
-  // car details carousel
-  // Resize and refresh page. slider-two slideBy bug remove
-  var changeSlide = 4; // mobile -1, desktop + 1
-  var slide = changeSlide;
-  if ($(window).width() < 600) {
-    var slide = changeSlide;
-    slide--;
-  } else if ($(window).width() > 999) {
-    var slide = changeSlide;
-    slide++;
-  } else {
-    var slide = changeSlide;
-  }
-
-  $(".one").owlCarousel({
-    nav: false,
-    dots: false,
-    items: 1,
-    margin: 5,
-    autoplay: 5000,
-    rtl: dirAr,
-  });
-  $(".two").owlCarousel({
-    nav: false,
-    dots: false,
-    margin: 5,
-    rtl: dirAr,
-    responsive: {
-      0: {
-        items: changeSlide - 1,
-        slideBy: changeSlide - 1,
-      },
-      600: {
-        items: changeSlide,
-        slideBy: changeSlide,
-      },
-      1000: {
-        items: changeSlide + 1,
-        slideBy: changeSlide + 1,
-      },
-    },
-  });
-  var owl = $(".one");
-  owl.owlCarousel();
-  owl.on("translated.owl.carousel", function (event) {
-    $(".right").removeClass("nonr");
-    $(".left").removeClass("nonl");
-    if ($(".one .owl-next").is(".disabled")) {
-      $(".slider .right").addClass("nonr");
-    }
-    if ($(".one .owl-prev").is(".disabled")) {
-      $(".slider .left").addClass("nonl");
-    }
-    $(".slider-two .item").removeClass("active");
-    var c = $(".slider .owl-item.active").index();
-    $(".slider-two .item").eq(c).addClass("active");
-    var d = Math.ceil((c + 1) / slide) - 1;
-    $(".slider-two .owl-dots .owl-dot").eq(d).trigger("click");
-  });
-  // $(".right").click(function () {
-  //   $(".slider .owl-next").trigger("click");
-  // });
-  // $(".left").click(function () {
-  //   $(".slider .owl-prev").trigger("click");
-  // });
-  $(".slider-two .item").click(function () {
-    var b = $(".item").index(this);
-    $(".slider .owl-dots .owl-dot").eq(b).trigger("click");
-    $(".slider-two .item").removeClass("active");
-    $(this).addClass("active");
-  });
-  var owl2 = $(".two");
-  owl2.owlCarousel();
-  owl2.on("translated.owl.carousel", function (event) {
-    $(".right-t").removeClass("nonr-t");
-    $(".left-t").removeClass("nonl-t");
-    if ($(".two .owl-next").is(".disabled")) {
-      $(".slider-two .right-t").addClass("nonr-t");
-    }
-    if ($(".two .owl-prev").is(".disabled")) {
-      $(".slider-two .left-t").addClass("nonl-t");
-    }
-  });
-  $(".right-t").click(function () {
-    $(".slider-two .owl-prev").trigger("click");
-  });
-  $(".left-t").click(function () {
-    $(".slider-two .owl-next").trigger("click");
   });
 
 });
